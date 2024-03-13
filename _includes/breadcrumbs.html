@@ -1,0 +1,18 @@
+{% if page.categories and page.categories != empty %}
+  <nav class="breadcrumbs">
+    <span itemscope itemtype="https://schema.org/BreadcrumbList">
+      <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="{{ site.url }}">
+          <span itemprop="name">Home</span>
+        </a>
+        <meta itemprop="position" content="1" />
+      </span> › 
+      <span itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="{{ site.url }}/{{ page.categories | first }}/">
+          <span itemprop="name">{{ page.categories | first | replace: '-',' ' | capitalize }}</span>
+        </a>
+        <meta itemprop="position" content="2" />
+      </span>
+    </span>
+  </nav><!-- /.breadcrumbs -->
+{% endif %}
