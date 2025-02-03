@@ -1,3 +1,14 @@
+---
+layout: article
+title: 'Fluid Mechanics'
+description: ''
+excerpt: ""
+tags: []
+categories: articles
+image:
+  teaser: xbox.jpeg
+---
+
 # CHAPTER NINE: MECHANICAL PROPERTIES OF FLUIDS
 
 ## 9.1 INTRODUCTION
