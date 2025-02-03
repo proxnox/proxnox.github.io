@@ -23,9 +23,9 @@ image:
 ## 9.2 PRESSURE
 - **Pressure**: It’s the force applied over an area. The smaller the area, the greater the pressure.
   - Formula: 
-    \[
+    $$
     P = \frac{F}{A}
-    \]
+    $$
   - Units: Pascal (Pa), where 1 Pa = 1 N/m².
 
 ### Pascal’s Law:
