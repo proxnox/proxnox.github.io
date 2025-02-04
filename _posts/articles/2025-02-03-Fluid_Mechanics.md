@@ -1,12 +1,12 @@
 ---
 layout: article
 title: 'Fluid Mechanics'
-description: 'Liquids and gases are called fluids because they can flow. This is what makes them different from solids.'
-excerpt: "Revise the formulas & theory of Mechanical Properties of Fluids for JEE and NEET."
-tags: [physics, jee, neet, ncert, fluids, formulas]
+description: 'Revise the formulas & theory of Mechanical Properties of Fluids for JEE and NEET.'
+excerpt: 'Liquids and gases are called fluids because they can flow. This is what makes them different from solids....'
+tags: [physics, jee, neet, ncert, fluids, formulas, class 11]
 categories: articles
 image:
-  teaser: fluid_mechanics.jpeg
+  teaser: fluid_mechanics.jpg
 ---
 
 # FLUIDS MECHANICS
@@ -22,18 +22,22 @@ image:
 
 ## 9.2 PRESSURE
 - **Pressure**: It’s the force applied over an area. The smaller the area, the greater the pressure.
-  - Formula: 
+  - **Formula**:
+
     $$
     P = \frac{F}{A}
     $$
+
   - Units: Pascal (Pa), where 1 Pa = 1 N/m².
 
 ### Pascal’s Law:
 - **Pascal’s Law**: Pressure in a fluid is the same at the same height. If you increase pressure at one point, it increases everywhere in the fluid.
-  - Formula:
+  - **Formula**:
+
     $$
     P = P_a + \rho gh
     $$
+
   - Where:
     - $ P_a $ = Atmospheric pressure
     - $ \rho $ = Density of the fluid
@@ -42,10 +46,12 @@ image:
 
 ### Hydraulic Machines:
 - **Hydraulic Lift**: Uses Pascal’s law to lift heavy objects with a small force.
-  - Formula:
+  - **Formula**:
+
     $$
     F_2 = \frac{A_2}{A_1} F_1
     $$
+
   - Where:
     - $ F_1 $ = Force applied on the smaller piston
     - $ F_2 $ = Force on the larger piston
@@ -54,19 +60,23 @@ image:
 ## 9.3 STREAMLINE FLOW
 - **Streamline Flow**: When a fluid flows smoothly without crossing paths.
   - **Equation of Continuity**: For incompressible fluids, the volume flow rate is constant.
+
     $$
     A_1 v_1 = A_2 v_2
     $$
+
   - Where:
     - $ A $ = Cross-sectional area
     - $ v $ = Velocity of the fluid
 
 ## 9.4 BERNOULLI’S PRINCIPLE
 - **Bernoulli’s Principle**: In a flowing fluid, the sum of pressure, kinetic energy, and potential energy remains constant.
-  - Formula:
+  - **Formula**:
+
     $$
     P + \frac{1}{2} \rho v^2 + \rho gh = \text{constant}
     $$
+
   - Where:
     - $ P $ = Pressure
     - $ \rho $ = Density
@@ -76,18 +86,22 @@ image:
 
 ### Applications:
 - **Torricelli’s Law**: Speed of efflux (fluid flowing out) from a hole in a tank.
-  - Formula:
+  - **Formula**:
+
     $$
     v = \sqrt{2gh}
     $$
+
 - **Dynamic Lift**: Explains why airplanes fly and spinning balls curve.
 
 ## 9.5 VISCOSITY
 - **Viscosity**: It’s like internal friction in fluids. Thick fluids like honey have high viscosity, while thin fluids like water have low viscosity.
-  - Formula:
+  - **Formula**:
+
     $$
     F = 6 \pi \eta a v
     $$
+
   - Where:
     - $ F $ = Viscous drag force
     - $ \eta $ = Coefficient of viscosity
@@ -96,17 +110,20 @@ image:
 
 ### Stokes’ Law:
 - **Stokes’ Law**: Describes the drag force on a sphere moving through a viscous fluid.
-  - Formula:
+  - **Formula**:
+
     $$
     F = 6 \pi \eta a v
     $$
 
 ## 9.6 SURFACE TENSION
 - **Surface Tension**: It’s the energy required to increase the surface area of a liquid. It’s why water forms droplets.
-  - Formula:
+  - **Formula**:
+
     $$
     S = \frac{F}{l}
     $$
+
   - Where:
     - $ S $ = Surface tension
     - $ F $ = Force
@@ -114,10 +131,12 @@ image:
 
 ### Capillary Rise:
 - **Capillary Action**: When a liquid rises in a narrow tube due to surface tension.
-  - Formula:
+  - **Formula**:
+
     $$
     h = \frac{2S \cos \theta}{\rho g a}
     $$
+
   - Where:
     - $ h $ = Height of the liquid rise
     - $ S $ = Surface tension
@@ -131,46 +150,55 @@ image:
 # QUICK REVISION: IMPORTANT CONCEPTS & FORMULAS
 
 1. **Pressure**:
-   $$
+
+   $$   
    P = \frac{F}{A}
    $$
 
 2. **Pascal’s Law**:
-   $$
+
+   $$   
    P = P_a + \rho gh
    $$
 
 3. **Hydraulic Lift**:
-   $$
+
+   $$   
    F_2 = \frac{A_2}{A_1} F_1
    $$
 
 4. **Equation of Continuity**:
-   $$
+
+   $$   
    A_1 v_1 = A_2 v_2
    $$
 
 5. **Bernoulli’s Principle**:
-   $$
+
+   $$   
    P + \frac{1}{2} \rho v^2 + \rho gh = \text{constant}
    $$
 
 6. **Torricelli’s Law**:
-   $$
+
+   $$   
    v = \sqrt{2gh}
    $$
 
 7. **Viscosity (Stokes’ Law)**:
-   $$
+
+   $$   
    F = 6 \pi \eta a v
    $$
 
 8. **Surface Tension**:
-   $$
+
+   $$   
    S = \frac{F}{2l}
    $$
 
 9. **Capillary Rise**:
-   $$
+
+   $$   
    h = \frac{2S \cos \theta}{\rho g a}
    $$
