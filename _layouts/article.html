@@ -11,7 +11,15 @@ type: article
 <div class="layout--article">
   {%- include article/top/custom.html -%}
 
-  <div class="article__content" itemprop="articleBody">{{ content }}</div>
+  <div class="article__content" itemprop="articleBody">
+    
+    {% if page.last_modified_at %}
+      <p style="font-size: 0.9em; color: #888; margin-bottom: 20px; font-style: italic;">
+        <i class="fas fa-sync-alt"></i> Last updated: {{ page.last_modified_at | date: "%B %d, %Y" }}
+      </p>
+    {% endif %}
+    {{ content }}
+  </div>
 
   {%- if _sharing -%}
     <section class="article__sharing d-print-none">{%- include sharing.html -%}</section>

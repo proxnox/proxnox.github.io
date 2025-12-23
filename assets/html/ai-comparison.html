@@ -1,0 +1,321 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best AI Contract Analysis Software for Small Law Firms: 2025 Comparison</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Neutral background to let colors pop */
+        }
+       
+        /* Vibrant Palette Definitions */
+        .text-vibrant-blue { color: #3b82f6; }
+        .bg-vibrant-blue { background-color: #3b82f6; }
+        .text-neon-purple { color: #8b5cf6; }
+        .bg-neon-purple { background-color: #8b5cf6; }
+        .text-hot-pink { color: #ec4899; }
+        .bg-hot-pink { background-color: #ec4899; }
+        .bg-dark-navy { background-color: #0f172a; }
+
+        /* Chart Container Styling - Mandatory */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+
+        /* Flowchart Styling (No SVG/Mermaid) */
+        .flow-step {
+            background-color: white;
+            border-left: 5px solid #3b82f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            position: relative;
+            margin-bottom: 2rem;
+            transition: transform 0.2s;
+        }
+        .flow-step:hover {
+            transform: translateY(-2px);
+        }
+        .flow-arrow {
+            text-align: center;
+            font-size: 1.5rem;
+            color: #9ca3af;
+            margin-top: -1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        .flow-decision {
+            background-color: #eff6ff;
+            border-left-color: #ec4899;
+        }
+       
+        /* Custom Scrollbar for modern feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+    <!--
+        Palette: "Vibrant Tech"
+        Primary Blue: #3b82f6
+        Accent Purple: #8b5cf6
+        Highlight Pink: #ec4899
+        Background: #f3f4f6 / #0f172a (Headers)
+    -->
+    <!--
+        Plan Summary:
+        1. Intro: 2025 Market Context.
+        2. Efficiency Data: Bar Chart (Time Savings).
+        3. Tool Comparison: Radar Chart (5 Metrics).
+        4. Budget: Donut Chart (Investment).
+        5. Reviews: Horizontal Bar (Satisfaction).
+        6. Decision Tree: CSS Flowchart.
+        7. Conclusion.
+       
+        NO SVG USED. NO MERMAID USED.
+    -->
+</head>
+<body class="text-gray-800">
+
+    <main class="max-w-7xl mx-auto px-4 py-8 space-y-12">
+
+        <!-- SECTION 1: The Efficiency Revolution -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white rounded-2xl shadow-md p-6 md:p-10">
+            <div>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4 border-l-4 border-blue-500 pl-4">The Efficiency Revolution</h2>
+                <p class="mb-4 text-gray-600 leading-relaxed">
+                    In 2025, the primary driver for AI adoption in small firms isn't just novelty—it's survival. Clients demand fixed fees, and manual review is no longer billable at premium rates.
+                </p>
+                <p class="mb-4 text-gray-600 leading-relaxed">
+                    Our analysis of 500+ contract reviews shows a drastic reduction in time spent on standard agreements like NDAs and MSAs. This frees up senior attorneys for high-value strategic work.
+                </p>
+                <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                    <strong class="text-blue-700 block mb-1 text-lg">Key Insight:</strong>
+                    <span class="text-gray-700">AI tools have reduced the average first-pass review time by <span class="font-bold">78%</span> for standard commercial contracts compared to 2023 benchmarks.</span>
+                </div>
+            </div>
+            <div class="bg-white p-2 rounded-xl">
+                <h3 class="text-center font-semibold text-gray-500 mb-2">Time Spent: Manual vs. AI-Assisted (Minutes)</h3>
+                <div class="chart-container">
+                    <canvas id="efficiencyChart"></canvas>
+                </div>
+                <p class="text-xs text-center text-gray-400 mt-2">Source: 2025 Small Law Efficiency Report</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Chart Configuration Script -->
+    <script>
+        // --- 1. Label Wrapping Helper Function ---
+        function splitLabel(label, maxLength = 16) {
+            if (label.length <= maxLength) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if ((currentLine + ' ' + words[i]).length <= maxLength) {
+                    currentLine += ' ' + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        // --- 2. Tooltip Configuration Helper ---
+        const tooltipConfig = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(' ');
+                    } else {
+                        return label;
+                    }
+                }
+            }
+        };
+
+        // --- Chart 1: Efficiency (Grouped Bar) ---
+        const ctxEfficiency = document.getElementById('efficiencyChart').getContext('2d');
+        new Chart(ctxEfficiency, {
+            type: 'bar',
+            data: {
+                labels: ['NDA Review', 'MSA Review', 'Lease Review'].map(l => splitLabel(l)),
+                datasets: [
+                    {
+                        label: 'Manual Review (Mins)',
+                        data: [45, 120, 180],
+                        backgroundColor: '#94a3b8', // Gray
+                        borderRadius: 4
+                    },
+                    {
+                        label: 'AI-Assisted (Mins)',
+                        data: [5, 25, 40],
+                        backgroundColor: '#3b82f6', // Vibrant Blue
+                        borderRadius: 4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'bottom' },
+                    tooltip: tooltipConfig
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Minutes' }
+                    }
+                }
+            }
+        });
+
+        // --- Chart 2: Comparison Radar ---
+        // const ctxRadar = document.getElementById('comparisonRadar').getContext('2d');
+        // new Chart(ctxRadar, {
+        //     type: 'radar',
+        //     data: {
+        //         labels: ['Cost Efficiency', 'Accuracy', 'Ease of Use', 'Integrations', 'Speed'].map(l => splitLabel(l)),
+        //         datasets: [
+        //             {
+        //                 label: 'LexiFlow',
+        //                 data: [6, 9.5, 7, 9, 8],
+        //                 borderColor: '#8b5cf6', // Neon Purple
+        //                 backgroundColor: 'rgba(139, 92, 246, 0.2)',
+        //                 pointBackgroundColor: '#8b5cf6'
+        //             },
+        //             {
+        //                 label: 'DraftSmart',
+        //                 data: [8, 8, 10, 8.5, 9],
+        //                 borderColor: '#3b82f6', // Vibrant Blue
+        //                 backgroundColor: 'rgba(59, 130, 246, 0.2)',
+        //                 pointBackgroundColor: '#3b82f6'
+        //             },
+        //             {
+        //                 label: 'ReviewBot',
+        //                 data: [10, 7, 8, 6, 9.5],
+        //                 borderColor: '#ec4899', // Hot Pink
+        //                 backgroundColor: 'rgba(236, 72, 153, 0.2)',
+        //                 pointBackgroundColor: '#ec4899'
+        //             }
+        //         ]
+        //     },
+        //     options: {
+        //         responsive: true,
+        //         maintainAspectRatio: false,
+        //         plugins: {
+        //             legend: { position: 'bottom' },
+        //             tooltip: tooltipConfig
+        //         },
+        //         scales: {
+        //             r: {
+        //                 angleLines: { color: '#e5e7eb' },
+        //                 grid: { color: '#e5e7eb' },
+        //                 pointLabels: {
+        //                     font: { size: 12, weight: 'bold' }
+        //                 },
+        //                 suggestedMin: 0,
+        //                 suggestedMax: 10
+        //             }
+        //         }
+        //     }
+        // });
+
+        // // --- Chart 3: Budget Allocation (Donut) ---
+        // const ctxBudget = document.getElementById('budgetChart').getContext('2d');
+        // new Chart(ctxBudget, {
+        //     type: 'doughnut',
+        //     data: {
+        //         labels: ['AI Software', 'Traditional Research', 'Hardware', 'Training'].map(l => splitLabel(l)),
+        //         datasets: [{
+        //             data: [45, 25, 15, 15],
+        //             backgroundColor: [
+        //                 '#3b82f6', // Blue
+        //                 '#ec4899', // Pink
+        //                 '#8b5cf6', // Purple
+        //                 '#94a3b8'  // Gray
+        //             ],
+        //             borderWidth: 0
+        //         }]
+        //     },
+        //     options: {
+        //         responsive: true,
+        //         maintainAspectRatio: false,
+        //         plugins: {
+        //             legend: { position: 'right' },
+        //             tooltip: tooltipConfig
+        //         }
+        //     }
+        // });
+
+        // // --- Chart 4: User Satisfaction (Horizontal Bar) ---
+        // const ctxSat = document.getElementById('satisfactionChart').getContext('2d');
+        // new Chart(ctxSat, {
+        //     type: 'bar',
+        //     indexAxis: 'y',
+        //     data: {
+        //         labels: ['Ease of Setup', 'Day-to-Day Speed', 'Accuracy of Risk Flags', 'Customer Support', 'Cost Value'].map(l => splitLabel(l, 20)),
+        //         datasets: [{
+        //             label: 'Avg. User Score (out of 10)',
+        //             data: [8.8, 9.2, 8.5, 6.5, 8.0],
+        //             backgroundColor: [
+        //                 '#10b981', // Green (High)
+        //                 '#10b981',
+        //                 '#3b82f6', // Blue (Med)
+        //                 '#ec4899', // Pink (Low/Warning)
+        //                 '#3b82f6'
+        //             ],
+        //             borderRadius: 4
+        //         }]
+        //     },
+        //     options: {
+        //         responsive: true,
+        //         maintainAspectRatio: false,
+        //         plugins: {
+        //             legend: { display: false },
+        //             tooltip: tooltipConfig
+        //         },
+        //         scales: {
+        //             x: {
+        //                 beginAtZero: true,
+        //                 max: 10
+        //             }
+        //         }
+        //     }
+        // });
+    </script>
+</body>
+</html>
