@@ -8,15 +8,17 @@ aside:
 show_tags: false
 ---
 
-<iframe 
-  src="{{ '/assets/html/ai-comparison.html' | relative_url }}" 
-  width="100%" 
-  height="625px" 
-  frameborder="0" 
-  scrolling="no" 
-  style="border:none; margin:25px;">
-  <h2>2025 Legal Contract Analysis Software Comparison</h2>
-</iframe>
+<div style="width:100%; height:100%; display:flex;">
+  <iframe 
+    src="{{ '/assets/html/ai-comparison.html' | relative_url }}" 
+    width="100%" 
+    height="666px" 
+    frameborder="0" 
+    scrolling="no" 
+    style="border:none; margin:25px;">
+    <h2>2025 Legal Contract Analysis Software Comparison</h2>
+  </iframe>
+</div>
 
 If you’re running a small law firm in 2025, you’ve probably noticed that the old way of doing things—spending hours manually marking up contracts—is officially dying. We’re in the middle of a massive shift where "smart automation" isn't just a luxury for the big guys anymore; it’s basically a survival tool for the rest of us. With clients pushing back on billable hours and demanding faster turnarounds, solo lawyers and small teams are using specialized AI to get the kind of analytical "muscle" that used to be reserved for the Am Law 100. It’s a total game-changer because it allows us to handle huge workloads with the kind of speed and accuracy that used to feel impossible for a small office.
 
