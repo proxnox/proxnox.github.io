@@ -204,7 +204,7 @@ Spellbook is the mighty powerhouse of drafting, especially for those lawyers who
 **For Firm-Wide Lifecycle Management:**
 HyperStart CLM is the most user-friendly and quickest to implement complete solution for law firms that need to sort out thousands of old documents.
 
-After all this comparison and information, all this tech is about assistance, not replacement. The one thing AI can’t replicate is the nuanced, human judgment that has always been the heart of the legal profession.
+After all the comparisons and information, all this tech is about assistance, not replacement. The one thing AI can’t replicate is the nuanced, human judgment that has always been the heart of the legal profession.
 
 By offloading the "boring and routine" tasks—like cross-referencing hundreds of pages or triple-checking formatting—small firms are finally getting their time back.
 
