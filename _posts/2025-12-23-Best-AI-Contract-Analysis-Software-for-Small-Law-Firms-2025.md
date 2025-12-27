@@ -1,8 +1,8 @@
 ---
 layout: article
-title: Best AI Contract Analysis Software for Small Law Firms - 2025 Comparison
+title: Best AI Contract Review Software for Small Law Firms - 2025 Comparison
 tags: AI Software Comparison
-permalink: Best-AI-Contract-Analysis-Software-for-Small-Law-Firms
+permalink: Best-AI-Contract-Review-Software-for-Small-Law-Firms
 aside:
   toc: true
 show_tags: false
@@ -16,7 +16,7 @@ show_tags: false
     frameborder="0" 
     scrolling="no" 
     style="border:none; margin:25px;">
-    <h2>2025 Legal Contract Analysis Software Comparison</h2>
+    <h2>2025 Legal Contract Review Software Comparison</h2>
   </iframe>
 </div>
 
