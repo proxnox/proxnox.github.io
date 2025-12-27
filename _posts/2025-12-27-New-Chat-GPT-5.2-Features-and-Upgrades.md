@@ -1,6 +1,6 @@
 ---
 layout: article
-title: GPT-5.2 Just Dropped - Your First Look at The New GPT Features
+title: GPT-5.2 Just Dropped - Take a Look at The New GPT Features
 tags: AI GPT ChatGPT 
 permalink: new-chat-gpt-features-and-updates
 show_tags: false
