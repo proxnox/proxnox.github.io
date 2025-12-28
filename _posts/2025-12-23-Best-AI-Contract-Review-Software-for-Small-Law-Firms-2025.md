@@ -34,7 +34,7 @@ For a solo practitioner, this is a massive win. You can now take on a complex de
 
 ## LegalOn: Why It’s the Best "Day 1" Choice
 
-If you don't have the time to sit around "training" a new piece of software or writing complex prompts, [LegalOn](https://www.legalontech.com/) is probably your best bet for 2025. What I like most about it is their "ready-to-go" philosophy. Instead of being a general AI that guesses what a contract should look like, it was built by veteran attorneys who pre-loaded it with over 50 "playbooks."
+If you don't have the time to sit around "training" a new piece of software or writing complex prompts, [LegalOn](https://www.legalontech.com/){:target="_blank"} is probably your best bet for 2025. What I like most about it is their "ready-to-go" philosophy. Instead of being a general AI that guesses what a contract should look like, it was built by veteran attorneys who pre-loaded it with over 50 "playbooks."
 
 This "attorney-in-the-loop" design is a lifesaver. When the AI flags a risk or suggests a change, it’s not just playing with words; it’s checking your document against actual market standards. It’s like having a senior partner looking over your shoulder. For most managing partners I've talked to, this tool alone frees up about 10 hours a week. That’s a massive 40% jump in what you can get done without staying at the office until 9 PM.
 
@@ -56,7 +56,7 @@ However, if you're a transactional lawyer, that’s usually a trade-off worth ma
 
 ## Spellbook: The Drafting Assistant That Lives in Word
 
-What really makes [Spellbook](https://www.spellbook.legal/) a standout in 2025 is that it lives exactly where we do: right inside Microsoft Word. I don’t know about you, but I hate having to export files or jump between a browser and my actual draft just to get some AI help. Spellbook is just an add-in, so it respects the way most of us already work. It’s powered by OpenAI’s top-tier models, but it’s been fine-tuned on millions of pages of actual legal text, statutes, and libraries so it actually speaks "lawyer."
+What really makes [Spellbook](https://www.spellbook.legal/){:target="_blank"} a standout in 2025 is that it lives exactly where we do: right inside Microsoft Word. I don’t know about you, but I hate having to export files or jump between a browser and my actual draft just to get some AI help. Spellbook is just an add-in, so it respects the way most of us already work. It’s powered by OpenAI’s top-tier models, but it’s been fine-tuned on millions of pages of actual legal text, statutes, and libraries so it actually speaks "lawyer."
 
 The real heavy hitter here is the "Associate" agent. It’s not just a chatbot that writes text; it’s more like a digital junior colleague that can plan out multi-step tasks. For example, if you’re working on an investment round, you can have it update an entire "bundle" of documents at once. It can take the terms from your term sheet and automatically propagate those changes across all the shareholder agreements and closing docs. Since it's "grounded" in your firm's own precedents and verifiable sources, you don't have to worry as much about the AI hallucinating or making up weird clauses in a sensitive deal.
 
@@ -75,7 +75,7 @@ The more you use it, the more it starts to mimic your specific "negotiation post
 
 ## Gavel Exec: High-End Redlining for Small Practices
 
-If you’re running a lean practice, [Gavel Exec](https://www.gavel.io/exec) is a name you need to know. It’s carved out a real niche in 2025 by focusing on exactly what solo and mid-sized transactional teams actually need: high-precision redlining that doesn't cost a fortune. At $160 a month, it’s often about half the price of tools like Spellbook, which makes it a very attractive option if you’re watching your overhead.
+If you’re running a lean practice, [Gavel Exec](https://www.gavel.io/exec){:target="_blank"} is a name you need to know. It’s carved out a real niche in 2025 by focusing on exactly what solo and mid-sized transactional teams actually need: high-precision redlining that doesn't cost a fortune. At $160 a month, it’s often about half the price of tools like Spellbook, which makes it a very attractive option if you’re watching your overhead.
 
 What makes Gavel Exec feel different is its "Projects" feature. Most AI tools just give you generic legal advice, but Gavel lets you upload your own firm’s history—whether that’s 50 or 500 of your past contracts. The AI essentially learns your "house style." When a third party sends you a document that doesn't match how you’ve successfully negotiated in the past, Gavel flags it and suggests the exact fallback positions you’ve used before.
 
@@ -103,7 +103,7 @@ The real magic happens when your case data and your AI tools start talking to ea
 
 ### Clio: The Integration Standard
 
-In 2025, [Clio](https://www.clio.com) is still the clear leader for firms that are growing fast. The main reason? It plays well with others. With over 250 third-party integrations, it acts like the "central brain" of your office.
+In 2025, [Clio](https://www.clio.com){:target="_blank"} is still the clear leader for firms that are growing fast. The main reason? It plays well with others. With over 250 third-party integrations, it acts like the "central brain" of your office.
 
 The connection between Clio and Gavel is particularly impressive—in fact, it’s often cited as the best integration in the entire Clio ecosystem. What this looks like in your day-to-day is "one-click" data transfers. Instead of manually typing in party names, addresses, or custom matter details, you just pull them straight from Clio. It automatically populates your contract review workflow, saving you from that mind-numbing copy-paste routine.
 
@@ -111,7 +111,7 @@ Once the review is finished, the documents are sent right back into your Clio Ma
 
 ### MyCase: The "All-In-One" Solution
 
-While Clio is great for people who love to customize, [MyCase](https://www.mycase.com) takes a completely different approach. Their philosophy is built around "purpose-built simplicity." Instead of making you manage a complex web of different apps, they’ve built their own AI tools, called MyCase IQ, directly into the platform.
+While Clio is great for people who love to customize, [MyCase](https://www.mycase.com){:target="_blank"} takes a completely different approach. Their philosophy is built around "purpose-built simplicity." Instead of making you manage a complex web of different apps, they’ve built their own AI tools, called MyCase IQ, directly into the platform.
 
 What I love about this is that you never have to leave the case file to get help. If you’re staring at a massive pile of court filings, you can use the AI to summarize documents, highlight key deadlines, or draft a quick client update email right there in the dashboard. It’s perfect for the "I just want it to work" crowd.
 
@@ -148,7 +148,7 @@ It’s a lifesaver for international M&A. When you’re dealing with different l
 
 ### Document Crunch for Construction
 
-Attorneys working on energy and infrastructure transactions make the most of [Document Crunch](https://www.documentcrunch.com/) to find the clauses in construction agreements that are most likely to create problems. Its AI models are specifically taught on the contracts of the particular industry to flag indemnity traps and insurance obligations.
+Attorneys working on energy and infrastructure transactions make the most of [Document Crunch](https://www.documentcrunch.com/){:target="_blank"} to find the clauses in construction agreements that are most likely to create problems. Its AI models are specifically taught on the contracts of the particular industry to flag indemnity traps and insurance obligations.
 
 ### HyperStart vs. Traditional CLMs
 

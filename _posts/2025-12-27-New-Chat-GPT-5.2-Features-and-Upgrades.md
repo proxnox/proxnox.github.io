@@ -241,4 +241,4 @@ GPT-5.2 therefore marks not merely an iterative improvement but a fundamental sh
     The new model comes with a price increase, with standard pricing at $1.75 per million input tokens and $14.00 per million output tokens. However, there's a 90% discount on cached inputs, potentially resulting in lower overall costs for completing tasks due to improved token efficiency.
 
 
-*All this information is Open-Source and also avaliable at [OpenAI](https://openai.com/index/introducing-gpt-5-2/)'s official site, you can also get more deeper information from here.*
+*All this information is Open-Source and also avaliable at [OpenAI](https://openai.com/index/introducing-gpt-5-2/){:target="_blank"}'s official site, you can also get more deeper information from here.*
