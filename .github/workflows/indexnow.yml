@@ -1,0 +1,14 @@
+name: IndexNow Auto Submit
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Submit sitemap to IndexNow
+        run: |
+          curl "https://www.bing.com/indexnow?url=https://proxnox.github.io/sitemap.xml&key=08b25ba01bad4b02ac7ec2fbcf9c7678"
