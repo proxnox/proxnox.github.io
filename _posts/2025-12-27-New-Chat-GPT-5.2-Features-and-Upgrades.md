@@ -242,3 +242,16 @@ GPT-5.2 therefore marks not merely an iterative improvement but a fundamental sh
 
 
 *All this information is Open-Source and also avaliable at [OpenAI](https://openai.com/index/introducing-gpt-5-2/){:target="_blank"}'s official site, you can also get more deeper information from here.*
+
+<div style="text-align: center;">
+  <script>
+    atOptions = {
+      'key' : '26eb480a441c47dce2ebdd9e019b8e52',
+      'format' : 'iframe',
+      'height' : 90,
+      'width' : 728,
+      'params' : {}
+    };
+  </script>
+  <script src="https://www.highperformanceformat.com/26eb480a441c47dce2ebdd9e019b8e52/invoke.js"></script>
+</div>
