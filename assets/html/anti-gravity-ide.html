@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Anti-Gravity IDE: Deep Research</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <!-- 
+        PALETTE SELECTION: "Electric Future"
+        Primary: #4338ca (Indigo-700)
+        Secondary: #0ea5e9 (Sky-500)
+        Accent: #f43f5e (Rose-500)
+        Background: #f8fafc (Slate-50)
+        Card Bg: #ffffff
+        Text: #0f172a (Slate-900)
+    -->
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+        }
+
+        /* Chart Container Rules - Strict Adherence */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            /* Max width constraint */
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            /* Base height */
+            max-height: 400px;
+        }
+
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+
+        /* Material Design Card Styles */
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #4338ca 0%, #0ea5e9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-header {
+            border-left: 5px solid #0ea5e9;
+            padding-left: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Flow Diagram Styles */
+        .flow-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 1rem;
+            background: #f1f5f9;
+            border-radius: 0.5rem;
+            border: 2px solid #e2e8f0;
+        }
+
+        .arrow-down {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 15px solid #94a3b8;
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- Narrative Plan HTML Comment
+    <!--
+    PLAN SUMMARY:
+    1. Introduction: Define "Anti-Gravity IDE" (Project IDX) as a cloud-first environment that removes local setup friction.
+    2. Features & Capabilities: Analyze AI integration (Gemini), full-stack previews, and multi-platform targets.
+    3. Performance & Languages: Visualize support levels and speed metrics.
+    4. Audience & Usability: Breakdown the 50/50 split between pro devs and generalists.
+    5. Pricing & Tiers: Clear comparison of Free Preview vs Future Enterprise.
+    6. Integrations: How it connects to Colab, Firebase, etc.
+    -->
+
+    <!-- Header / Hero -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-indigo-800 tracking-tight">Google <span
+                    class="text-sky-500">Anti-Gravity</span> IDE</h1>
+            <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
+                <a href="#features" class="hover:text-indigo-600">Features</a>
+                <a href="#performance" class="hover:text-indigo-600">Performance</a>
+                <a href="#integration" class="hover:text-indigo-600">Ecosystem Integration</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+        <!-- Intro Section -->
+        <section class="mb-12 text-center max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-slate-900">Coding Without the <span
+                    class="gradient-text">Weight</span></h2>
+            <p class="text-lg text-slate-600 leading-relaxed">
+                Welcome to the era of the "Anti-Gravity" IDE (officially known as <strong>Project IDX</strong>).
+                By shifting the entire development workflow to the cloud, Google has removed the "gravity" of local
+                setup, environment conflicts, and hardware limitations.
+                Infused with <strong>Gemini AI</strong>, it offers a seamless, browser-based experience for both
+                hardcore developers and creative coders.
+            </p>
+        </section>
+
+        <!-- KPI Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div class="card bg-gradient-to-br from-indigo-600 to-indigo-800 text-white">
+                <h3 class="text-indigo-100 text-sm uppercase font-semibold">Setup Time</h3>
+                <div class="text-5xl font-bold my-2">0s</div>
+                <p class="text-indigo-200 text-sm">Instant environment provisioning via Cloud Workstations.</p>
+            </div>
+            <div class="card">
+                <h3 class="text-slate-500 text-sm uppercase font-semibold">AI Integration</h3>
+                <div class="text-5xl font-bold my-2 text-indigo-600">100%</div>
+                <p class="text-slate-600 text-sm">Built-in Gemini assistance for code generation & debugging.</p>
+            </div>
+            <div class="card">
+                <h3 class="text-slate-500 text-sm uppercase font-semibold">Platform Support</h3>
+                <div class="text-5xl font-bold my-2 text-sky-500">Multi</div>
+                <p class="text-slate-600 text-sm">Web, Android, iOS simulators directly in the browser.</p>
+            </div>
+        </div>
+
+        <!-- Section: Features & Capabilities -->
+        <section id="features" class="mb-16">
+            <div class="section-header">
+                <h2 class="text-3xl font-bold text-slate-800">Capabilities & Core Features</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                <div>
+                    <p class="text-slate-600 mb-6">
+                        The Anti-Gravity IDE isn't just a text editor; it's a full-stack workspace.
+                        It leverages Google's cloud infrastructure to run heavy emulators (like Android) that would
+                        normally slow down a local laptop.
+                        The chart below breaks down the core capability scores compared to traditional local IDEs.
+                    </p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center text-slate-700">
+                            <span class="bg-indigo-100 text-indigo-600 p-1 rounded mr-3">✓</span>
+                            <strong>AI-Assisted Coding:</strong> Smart completion and explanation.
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <span class="bg-indigo-100 text-indigo-600 p-1 rounded mr-3">✓</span>
+                            <strong>Full Emulators:</strong> Run Android/iOS apps in the cloud.
+                        </li>
+                        <li class="flex items-center text-slate-700">
+                            <span class="bg-indigo-100 text-indigo-600 p-1 rounded mr-3">✓</span>
+                            <strong>Framework Agnostic:</strong> Angular, React, Flutter, Go, Python.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Chart 1: Capabilities Radar -->
+                <div class="card">
+                    <h3 class="text-lg font-semibold text-slate-800 mb-4">Capability Matrix: Local vs. Anti-Gravity</h3>
+                    <div class="chart-container">
+                        <canvas id="capabilitiesChart"></canvas>
+                    </div>
+                    <p class="text-xs text-center text-slate-400 mt-2">Data Source: Internal Feature Comparison 2024</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Language Performance -->
+        <section id="performance" class="mb-16">
+            <div class="section-header">
+                <h2 class="text-3xl font-bold text-slate-800">Language Performance & Optimization</h2>
+            </div>
+            <p class="text-slate-600 mb-8 max-w-3xl">
+                Does "Anti-Gravity" mean better performance? Yes, for setup and context switching.
+                While execution speed depends on the underlying Cloud VM, the tooling support varies by language.
+                The IDE is heavily optimized for web and mobile frameworks, performing exceptionally well with
+                JavaScript/TypeScript and Dart.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Chart 2: Language Support Bar -->
+                <div class="card md:col-span-2">
+                    <h3 class="text-lg font-semibold text-slate-800 mb-4">Ecosystem Support Level by Language</h3>
+                    <div class="chart-container">
+                        <canvas id="languageChart"></canvas>
+                    </div>
+                    <p class="text-sm text-slate-500 mt-4">
+                        <strong>Analysis:</strong> JavaScript/TypeScript and Dart (Flutter) receive "First-Class"
+                        support with deep AI integration and live previews.
+                        Python and Go are fully supported but may lack some specific deep-simulation features found in
+                        mobile dev.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: User Demographics (50/50 Split) -->
+        <section class="mb-16">
+            <div class="section-header">
+                <h2 class="text-3xl font-bold text-slate-800">Who is this for?</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-lg font-semibold text-slate-800 mb-4">Target Audience Split</h3>
+                    <div class="chart-container">
+                        <canvas id="audienceChart"></canvas>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="text-xl font-bold text-indigo-700 mb-3">Bridging the Gap</h3>
+                    <p class="text-slate-600 mb-4">
+                        The "Anti-Gravity" nature appeals to two distinct groups equally:
+                    </p>
+                    <div class="bg-white border-l-4 border-indigo-500 p-4 shadow-sm mb-4">
+                        <h4 class="font-bold text-slate-800">For Developers</h4>
+                        <p class="text-sm text-slate-600">Eliminates "works on my machine" issues. consistent
+                            environments, instant onboarding for teams, and powerful terminal access.</p>
+                    </div>
+                    <div class="bg-white border-l-4 border-sky-400 p-4 shadow-sm">
+                        <h4 class="font-bold text-slate-800">For General Creators / Low-Code</h4>
+                        <p class="text-sm text-slate-600">Pre-configured templates remove the fear of "setup." AI
+                            assistance writes boilerplate, allowing focus on logic and design.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Integrations -->
+        <section id="integration" class="mb-16">
+            <div class="section-header">
+                <h2 class="text-3xl font-bold text-slate-800">Ecosystem Integration</h2>
+            </div>
+            <div class="card">
+                <p class="text-slate-600 mb-8 text-center">
+                    The Anti-Gravity IDE acts as the central hub, pulling in resources from Google's vast ecosystem.
+                </p>
+
+                <!-- HTML Flow Diagram -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center justify-items-center">
+                    <!-- Step 1 -->
+                    <div class="flow-step w-full">
+                        <div class="text-2xl mb-2">🧠</div>
+                        <h4 class="font-bold text-indigo-700">Google Colab</h4>
+                        <p class="text-xs text-slate-500">Import Notebooks & AI Models</p>
+                    </div>
+
+                    <!-- Arrow -->
+                    <div class="hidden md:block text-slate-300 text-4xl">→</div>
+                    <div class="block md:hidden arrow-down"></div>
+
+                    <!-- Step 2 -->
+                    <div class="flow-step w-full border-indigo-500 border-2 bg-indigo-50">
+                        <div class="text-3xl mb-2">🚀</div>
+                        <h4 class="font-bold text-indigo-900">Project IDX</h4>
+                        <p class="text-xs text-indigo-700">The "Anti-Gravity" Core</p>
+                    </div>
+
+                    <!-- Arrow -->
+                    <div class="hidden md:block text-slate-300 text-4xl">→</div>
+                    <div class="block md:hidden arrow-down"></div>
+
+                    <!-- Step 3 -->
+                    <div class="flow-step w-full">
+                        <div class="text-2xl mb-2">🔥</div>
+                        <h4 class="font-bold text-indigo-700">Firebase Hosting</h4>
+                        <p class="text-xs text-slate-500">One-Click Global Deployment</p>
+                    </div>
+                </div>
+
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-slate-50 p-4 rounded text-sm text-slate-600">
+                        <strong>Colab Integration:</strong> While Colab is distinct, IDX allows for seamless integration
+                        of Python logic developed in notebooks into full web applications.
+                    </div>
+                    <div class="bg-slate-50 p-4 rounded text-sm text-slate-600">
+                        <strong>GitHub:</strong> Full two-way sync. Import any repo instantly without local cloning.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- SCRIPT SECTION -->
+    <script>
+        // --- UTILITIES ---
+
+        // Label Wrapping Function (Strict Requirement)
+        function formatLabel(str, maxLen = 16) {
+            if (str.length <= maxLen) return str;
+            const words = str.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if ((currentLine + " " + words[i]).length <= maxLen) {
+                    currentLine += " " + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        // Common Chart Options
+        const commonOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        font: { family: 'Inter', size: 12 },
+                        padding: 20
+                    }
+                },
+                tooltip: {
+                    backgroundColor: 'rgba(15, 23, 42, 0.9)',
+                    padding: 12,
+                    callbacks: {
+                        title: function (tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                                return label.join(' ');
+                            } else {
+                                return label;
+                            }
+                        }
+                    }
+                }
+            }
+        };
+
+        // --- CHART 1: Capabilities Radar (Chart.js) ---
+        // GOAL: Compare features of Anti-Gravity vs Local
+        // REASON: Radar charts are excellent for comparing multiple quantitative variables.
+        const ctxRadar = document.getElementById('capabilitiesChart').getContext('2d');
+        new Chart(ctxRadar, {
+            type: 'radar',
+            data: {
+                labels: ['Setup Speed', 'AI Integration', 'Collaboration', 'Offline Access', 'Hardware Independence', 'Mobile Preview'],
+                datasets: [{
+                    label: 'Anti-Gravity IDE (Cloud)',
+                    data: [95, 90, 85, 20, 95, 90],
+                    backgroundColor: 'rgba(79, 70, 229, 0.2)', // Indigo
+                    borderColor: '#4f46e5',
+                    pointBackgroundColor: '#4f46e5',
+                }, {
+                    label: 'Traditional Local IDE',
+                    data: [40, 60, 40, 95, 30, 60],
+                    backgroundColor: 'rgba(148, 163, 184, 0.2)', // Slate
+                    borderColor: '#94a3b8',
+                    pointBackgroundColor: '#94a3b8',
+                }]
+            },
+            options: {
+                ...commonOptions,
+                scales: {
+                    r: {
+                        angleLines: { color: '#e2e8f0' },
+                        grid: { color: '#e2e8f0' },
+                        pointLabels: {
+                            font: { family: 'Inter', size: 11 },
+                            color: '#64748b'
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 100
+                    }
+                }
+            }
+        });
+
+        // --- CHART 2: Language Support (Bar Chart) ---
+        // GOAL: Compare support levels
+        // REASON: Bar charts clearly show ranking and magnitude.
+
+        // Data prep with label wrapping
+        const langLabelsRaw = ['JavaScript / TypeScript', 'Dart (Flutter)', 'Python', 'Go (Golang)', 'Java / Kotlin', 'Rust'];
+        const langLabels = langLabelsRaw.map(l => formatLabel(l));
+
+        const ctxBar = document.getElementById('languageChart').getContext('2d');
+        new Chart(ctxBar, {
+            type: 'bar',
+            data: {
+                labels: langLabels,
+                datasets: [{
+                    label: 'Integration Score (0-100)',
+                    data: [98, 95, 85, 80, 65, 60],
+                    backgroundColor: [
+                        '#4f46e5', // JS - Indigo
+                        '#0ea5e9', // Dart - Sky
+                        '#6366f1', // Python - Indigo Light
+                        '#38bdf8', // Go - Sky Light
+                        '#94a3b8', // Java - Slate
+                        '#cbd5e1'  // Rust - Slate Light
+                    ],
+                    borderRadius: 6
+                }]
+            },
+            options: {
+                ...commonOptions,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        grid: { borderDash: [2, 4], color: '#f1f5f9' },
+                        title: { display: true, text: 'Feature Parity Score' }
+                    },
+                    x: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+
+        // --- CHART 3: Demographics (Donut) ---
+        // GOAL: Show the 50-50 split
+        // REASON: Donut charts are perfect for part-to-whole relationships.
+        const ctxDonut = document.getElementById('audienceChart').getContext('2d');
+        new Chart(ctxDonut, {
+            type: 'doughnut',
+            data: {
+                labels: ['Pro Developers', 'General / Learning'],
+                datasets: [{
+                    data: [50, 50],
+                    backgroundColor: ['#4338ca', '#f43f5e'], // Indigo vs Rose (Accent)
+                    borderWidth: 0,
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                ...commonOptions,
+                cutout: '70%',
+                plugins: {
+                    ...commonOptions.plugins,
+                    legend: { position: 'right' }
+                }
+            }
+        });
+
+    </script>
+</body>
+
+</html>
