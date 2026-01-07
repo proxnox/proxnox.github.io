@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursor 2.0: The AI-First Code Editor Research</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- FontAwesome for Icons (No SVG Graphics) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Configuration for Tailwind & Theme -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        bgDark: '#0B1120', // Deepest Slate
+                        cardDark: '#1E293B', // Slate 800
+                        accentBlue: '#38BDF8', // Sky 400
+                        accentPurple: '#A78BFA', // Violet 400
+                        accentGreen: '#34D399', // Emerald 400
+                        textMain: '#F8FAFC', // Slate 50
+                        textMuted: '#94A3B8', // Slate 400
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0B1120;
+            color: #F8FAFC;
+        }
+        
+        /* Chart Container Styling Rules */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 100%; /* Default max width */
+            height: 300px; /* Base height */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+            .chart-container-large {
+                height: 400px;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B1120; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #38BDF8; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #A78BFA; 
+        }
+    </style>
+    
+    <!-- 
+        PALETTE: "Cyberpunk Neon" (Based on 'Brilliant Blues' / Tech Aesthetic)
+        HEX CODES: #0B1120 (Bg), #38BDF8 (Blue), #A78BFA (Purple), #34D399 (Green)
+        
+        NARRATIVE PLAN:
+        1. Hero: What is Cursor? (The Hook)
+        2. Performance: Velocity comparison (Bar Chart).
+        3. Features: The "Magic" of Tab & Composer.
+        4. Languages: Where it shines (Radar Chart).
+        5. Accessibility: Beginners vs Pros.
+        6. Pricing: Free vs Paid (Stacked Bar).
+        7. Conclusion.
+        
+        VISUALIZATION CHOICES (NO SVG):
+        - Productivity: Bar Chart (Goal: Compare)
+        - Language Support: Radar Chart (Goal: Relationships/Compare)
+        - Feature Usage: Donut Chart (Goal: Inform/Proportion)
+        - Pricing Quota: Stacked Horizontal Bar (Goal: Compare)
+        - Icons: FontAwesome (Text-based)
+    -->
+</head>
+<body class="antialiased">
+
+    <!-- Navigation / Header -->
+    <header class="sticky top-0 z-50 bg-bgDark/90 backdrop-blur-md border-b border-white/10 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-terminal text-accentBlue text-2xl"></i>
+                <h1 class="text-2xl font-bold tracking-tight text-white">Cursor <span class="text-accentBlue">2.0</span></h1>
+            </div>
+            <nav class="hidden md:flex gap-6 text-sm font-medium text-textMuted">
+                <a href="#performance" class="hover:text-accentBlue transition">Performance</a>
+                <a href="#features" class="hover:text-accentBlue transition">Capabilities</a>
+                <a href="#pricing" class="hover:text-accentBlue transition">Pricing</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20">
+
+        <!-- Section 1: Introduction -->
+        <section class="text-center space-y-6">
+            <h2 class="text-4xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-accentBlue via-purple-400 to-accentGreen pb-2">
+                The AI-First Code Editor
+            </h2>
+            <p class="text-xl text-textMuted max-w-3xl mx-auto leading-relaxed">
+                Cursor 2.0 isn't just a plugin—it's a fork of VS Code that integrates Large Language Models (LLMs) directly into the editor's core. By indexing your entire codebase, it understands context better than any external tool, offering "Cursor Tab" predictive edits and "Composer" for multi-file generation.
+            </p>
+            <div class="flex justify-center gap-4 mt-8">
+                <div class="bg-cardDark px-6 py-3 rounded-full border border-white/10 shadow-lg flex items-center gap-2">
+                    <i class="fa-solid fa-bolt text-yellow-400"></i>
+                    <span class="font-semibold">Powered by Claude 3.5 & GPT-4o</span>
+                </div>
+                <div class="bg-cardDark px-6 py-3 rounded-full border border-white/10 shadow-lg flex items-center gap-2">
+                    <i class="fa-brands fa-github text-white"></i>
+                    <span class="font-semibold">Fork of VS Code</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Performance & Velocity -->
+        <section id="performance" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 order-2 lg:order-1">
+                <div class="bg-cardDark p-6 rounded-xl border-l-4 border-accentBlue shadow-xl">
+                    <h3 class="text-2xl font-bold text-white mb-2">Velocity Shift</h3>
+                    <p class="text-textMuted">
+                        Traditional coding involves typing every character. Copilot introduced "autocomplete" for the next few tokens. Cursor 2.0 introduces <strong>"Next-Edit Prediction"</strong>. It doesn't just guess the next word; it guesses the next logic change, often writing 10-20 lines instantly based on your cursor movement and recent file changes.
+                    </p>
+                </div>
+                <div class="bg-cardDark p-6 rounded-xl border-l-4 border-accentPurple shadow-xl">
+                    <h3 class="text-2xl font-bold text-white mb-2">Context Window</h3>
+                    <p class="text-textMuted">
+                        While standard assistants see the current file, Cursor indexes your **entire folder structure**. It uses a technique called RAG (Retrieval-Augmented Generation) to pull relevant context from obscure utility files you haven't opened in weeks.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="bg-cardDark p-6 rounded-2xl shadow-2xl border border-white/5 order-1 lg:order-2">
+                <div class="mb-4">
+                    <h4 class="text-lg font-semibold text-white">Productivity Impact (Lines/Hour)</h4>
+                    <p class="text-xs text-textMuted">Estimated velocity based on average accepted AI suggestions.</p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="velocityChart"></canvas>
+                </div>
+                <div class="mt-4 text-center text-sm text-accentGreen font-bold">
+                    <i class="fa-solid fa-arrow-trend-up"></i> Cursor users report ~40% faster MVP delivery.
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Core Capabilities -->
+        <section id="features" class="space-y-12">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-white">Capabilities & The "Magic"</h2>
+                <p class="text-textMuted mt-2">Breaking down the tools that separate Cursor from standard VS Code.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-cardDark rounded-xl overflow-hidden shadow-lg hover:translate-y-1 transition duration-300">
+                    <div class="h-2 bg-accentBlue"></div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-accentBlue/20 rounded-lg flex items-center justify-center mb-4 text-accentBlue text-xl">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Cursor Tab</h3>
+                        <p class="text-textMuted text-sm">
+                            More than autocomplete. It suggests diffs. If you change a variable name in one place, Cursor Tab automatically suggests changing it in the next 3 occurrences without you typing.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-cardDark rounded-xl overflow-hidden shadow-lg hover:translate-y-1 transition duration-300">
+                    <div class="h-2 bg-accentPurple"></div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-accentPurple/20 rounded-lg flex items-center justify-center mb-4 text-accentPurple text-xl">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Codebase Chat</h3>
+                        <p class="text-textMuted text-sm">
+                            Press <span class="bg-white/10 px-1 rounded font-mono text-xs">Cmd+L</span>. Chat with your code. "Where is the authentication logic?" "How do I add a new route?" It scans your files to answer accurately.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-cardDark rounded-xl overflow-hidden shadow-lg hover:translate-y-1 transition duration-300">
+                    <div class="h-2 bg-accentGreen"></div>
+                    <div class="p-6">
+                        <div class="w-12 h-12 bg-accentGreen/20 rounded-lg flex items-center justify-center mb-4 text-accentGreen text-xl">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Composer</h3>
+                        <p class="text-textMuted text-sm">
+                            Press <span class="bg-white/10 px-1 rounded font-mono text-xs">Cmd+I</span>. Opens a mini-window where you can write entire multi-file features. "Create a login page with Tailwind and connect it to Firebase."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Language Proficiency -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+             <div class="bg-cardDark p-6 rounded-2xl shadow-2xl border border-white/5">
+                <div class="mb-4">
+                    <h4 class="text-lg font-semibold text-white">Language Optimization</h4>
+                    <p class="text-xs text-textMuted">AI model accuracy across major tech stacks.</p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="languageRadar"></canvas>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <h3 class="text-3xl font-bold text-white">Does it work for my stack?</h3>
+                <p class="text-textMuted leading-relaxed">
+                    Cursor sits on top of modern LLMs which are heavily trained on GitHub repositories. Consequently, popular languages see the highest accuracy.
+                </p>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-brands fa-python text-accentBlue mt-1"></i>
+                        <div>
+                            <strong class="text-white block">Python & TypeScript</strong>
+                            <span class="text-textMuted text-sm">Tier 1 Performance. The models are exceptionally good at these due to massive training data.</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-brands fa-rust text-accentPurple mt-1"></i>
+                        <div>
+                            <strong class="text-white block">Rust & Go</strong>
+                            <span class="text-textMuted text-sm">Tier 1.5. Excellent logic generation, though occasionally struggles with very niche borrowing rules in Rust complex edge cases.</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-code text-accentGreen mt-1"></i>
+                        <div>
+                            <strong class="text-white block">HTML/CSS/Tailwind</strong>
+                            <span class="text-textMuted text-sm">Near Flawless. It can generate complete, beautiful UIs from a single prompt.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section 5: Accessibility Comparison -->
+        <section class="bg-cardDark rounded-2xl p-8 border border-white/5 shadow-2xl">
+            <h3 class="text-2xl font-bold text-white mb-8 text-center">Accessibility: Who is this for?</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
+                <!-- Divider Line for Desktop -->
+                <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-white/10 -translate-x-1/2"></div>
+
+                <!-- Beginners -->
+                <div class="pr-0 md:pr-8 text-right md:text-right text-center">
+                    <div class="inline-block bg-accentBlue/10 text-accentBlue px-4 py-1 rounded-full text-sm font-bold mb-4">
+                        For Beginners / Content Creators
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">The "No-Code" Feel</h4>
+                    <p class="text-textMuted text-sm mb-4">
+                        For those making coding videos or learning, Cursor lowers the barrier to entry significantly.
+                    </p>
+                    <ul class="space-y-2 text-sm text-textMuted inline-block text-left">
+                        <li><i class="fa-solid fa-check text-accentBlue mr-2"></i> Explanation: "Explain this code to me" feature is built-in.</li>
+                        <li><i class="fa-solid fa-check text-accentBlue mr-2"></i> Fixes: "Fix bugs" button analyzes stack traces automatically.</li>
+                        <li><i class="fa-solid fa-check text-accentBlue mr-2"></i> Setup: Handles boilerplate code instantly.</li>
+                    </ul>
+                </div>
+
+                <!-- Experts -->
+                <div class="pl-0 md:pl-8 text-left md:text-left text-center">
+                    <div class="inline-block bg-accentPurple/10 text-accentPurple px-4 py-1 rounded-full text-sm font-bold mb-4">
+                        For Senior Developers
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-2">The Velocity Booster</h4>
+                    <p class="text-textMuted text-sm mb-4">
+                        It doesn't replace logic; it removes typing. It acts as a junior dev pairing with you.
+                    </p>
+                    <ul class="space-y-2 text-sm text-textMuted inline-block text-left">
+                        <li><i class="fa-solid fa-check text-accentPurple mr-2"></i> Boilerplate: Generates tests and types instantly.</li>
+                        <li><i class="fa-solid fa-check text-accentPurple mr-2"></i> Refactoring: "Refactor this function to be async" happens in seconds.</li>
+                        <li><i class="fa-solid fa-check text-accentPurple mr-2"></i> Legacy Code: explains undocumented legacy files.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Pricing -->
+        <section id="pricing" class="space-y-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-white">Pricing & The "Free" Tier</h2>
+                <p class="text-textMuted mt-2">Is the Pro plan worth the $20/month investment?</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Pricing Chart -->
+                <div class="bg-cardDark p-6 rounded-2xl border border-white/5">
+                    <div class="mb-2">
+                        <h4 class="text-lg font-semibold text-white">Premium Request Quota</h4>
+                        <p class="text-xs text-textMuted">Number of "Fast" GPT-4o/Claude-3.5 requests per month.</p>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="pricingChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Pricing Details -->
+                <div class="flex flex-col gap-4">
+                    <!-- Free Plan -->
+                    <div class="bg-bgDark p-6 rounded-xl border border-white/10 hover:border-accentGreen/50 transition">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="text-xl font-bold text-white">Hobby (Free)</h4>
+                            <span class="text-accentGreen font-bold">$0</span>
+                        </div>
+                        <p class="text-sm text-textMuted mb-4">Perfect for trying it out or light usage.</p>
+                        <div class="grid grid-cols-2 gap-2 text-sm text-textMuted">
+                            <span><i class="fa-solid fa-check text-accentGreen mr-2"></i>2000 Completions</span>
+                            <span><i class="fa-solid fa-check text-accentGreen mr-2"></i>50 Slow Premium Reqs</span>
+                            <span><i class="fa-solid fa-check text-accentGreen mr-2"></i>Basic Chat</span>
+                            <span><i class="fa-solid fa-check text-accentGreen mr-2"></i>Codebase Indexing</span>
+                        </div>
+                    </div>
+
+                    <!-- Pro Plan -->
+                    <div class="bg-gradient-to-br from-cardDark to-accentBlue/10 p-6 rounded-xl border border-accentBlue/50 shadow-lg relative overflow-hidden">
+                        <div class="absolute top-0 right-0 bg-accentBlue text-bgDark text-xs font-bold px-3 py-1 rounded-bl-lg">RECOMMENDED</div>
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="text-xl font-bold text-white">Pro</h4>
+                            <span class="text-accentBlue font-bold">$20<span class="text-sm text-textMuted font-normal">/mo</span></span>
+                        </div>
+                        <p class="text-sm text-textMuted mb-4">For daily drivers and professionals.</p>
+                        <div class="grid grid-cols-2 gap-2 text-sm text-white">
+                            <span><i class="fa-solid fa-bolt text-accentBlue mr-2"></i>Unlimited Completions</span>
+                            <span><i class="fa-solid fa-bolt text-accentBlue mr-2"></i>500 Fast Premium Reqs</span>
+                            <span><i class="fa-solid fa-bolt text-accentBlue mr-2"></i>Unlimited Slow Reqs</span>
+                            <span><i class="fa-solid fa-bolt text-accentBlue mr-2"></i>10 Daily Claude Opus</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Chart Logic -->
+    <script>
+        // --- UTILITY: Label Wrapping Function (16 char limit) ---
+        function wrapLabels(labels) {
+            return labels.map(label => {
+                if (label.length <= 16) return label;
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = words[0];
+
+                for (let i = 1; i < words.length; i++) {
+                    if ((currentLine + " " + words[i]).length <= 16) {
+                        currentLine += " " + words[i];
+                    } else {
+                        lines.push(currentLine);
+                        currentLine = words[i];
+                    }
+                }
+                lines.push(currentLine);
+                return lines;
+            });
+        }
+
+        // --- CHART GLOBAL DEFAULTS ---
+        Chart.defaults.color = '#94A3B8';
+        Chart.defaults.font.family = 'Inter';
+        
+        // Tooltip Configuration for Wrapped Labels
+        const tooltipPlugin = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(' ');
+                    } else {
+                        return label;
+                    }
+                }
+            }
+        };
+
+        // --- 1. VELOCITY CHART (Bar) ---
+        const velocityCtx = document.getElementById('velocityChart').getContext('2d');
+        const rawVelocityLabels = ["Manual Coding", "Standard Autocomplete", "Cursor 2.0 Tab"];
+        new Chart(velocityCtx, {
+            type: 'bar',
+            data: {
+                labels: wrapLabels(rawVelocityLabels),
+                datasets: [{
+                    label: 'Efficiency Score (Arbitrary Units)',
+                    data: [20, 45, 85],
+                    backgroundColor: [
+                        '#1E293B', // Dark Slate
+                        '#94A3B8', // Muted
+                        '#38BDF8'  // Accent Blue (Cursor)
+                    ],
+                    borderRadius: 6,
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: tooltipPlugin
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: { color: '#334155' }
+                    },
+                    x: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+
+        // --- 2. LANGUAGE RADAR CHART ---
+        const radarCtx = document.getElementById('languageRadar').getContext('2d');
+        new Chart(radarCtx, {
+            type: 'radar',
+            data: {
+                labels: ['Python', 'JavaScript/TS', 'Rust', 'Go', 'C++', 'HTML/CSS'],
+                datasets: [{
+                    label: 'Cursor Capability',
+                    data: [98, 98, 90, 85, 75, 95],
+                    backgroundColor: 'rgba(167, 139, 250, 0.2)', // Purple transparent
+                    borderColor: '#A78BFA',
+                    pointBackgroundColor: '#fff',
+                    pointBorderColor: '#A78BFA',
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderColor: '#A78BFA'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: tooltipPlugin
+                },
+                scales: {
+                    r: {
+                        angleLines: { color: '#334155' },
+                        grid: { color: '#334155' },
+                        pointLabels: { color: '#F8FAFC', font: { size: 12 } },
+                        suggestedMin: 50,
+                        suggestedMax: 100
+                    }
+                }
+            }
+        });
+
+        // --- 3. PRICING CHART (Stacked Horizontal Bar) ---
+        const pricingCtx = document.getElementById('pricingChart').getContext('2d');
+        new Chart(pricingCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Hobby Plan', 'Pro Plan'],
+                datasets: [{
+                    label: 'Fast Premium Requests',
+                    data: [50, 500],
+                    backgroundColor: ['#34D399', '#38BDF8'], // Green, Blue
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                indexAxis: 'y', // Horizontal Bar
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: tooltipPlugin
+                },
+                scales: {
+                    x: {
+                        grid: { color: '#334155' },
+                        beginAtZero: true
+                    },
+                    y: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
