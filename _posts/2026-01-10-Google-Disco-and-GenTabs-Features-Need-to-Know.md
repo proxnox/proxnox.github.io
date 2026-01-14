@@ -29,6 +29,8 @@ At its core, Google Disco is an experimental AI-first browsing environment creat
 
 ![google gentab disco app join waitlist](/assets/images/google_disco.png)
 
+*You can apply to join the waitlist from [here](https://labs.google/disco){:target="_blank"}*
+
 **Built on Chromium (the same foundation as Google Chrome), Disco isn't replacing traditional browsers** but rather testing new ways to interact with online content. The experimental browser fundamentally assumes that most real work happens across multiple pages simultaneously - whether you're researching, planning, or learning.
 
 ### How it changes the way we browse
