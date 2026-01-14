@@ -16,6 +16,8 @@ GitHub Copilot transforms how developers write code, yet many users barely scrat
 
 ![github copilot usage of GPT-5.2, Gemini, Claude AI for free and better performance](/assets//images/github-copilot.png)
 
+*You can access Github's Copilot with many othwer AI models from [here](https://github.com/copilot)*
+
 In this article, we'll explore the lesser-known features of GitHub Copilot that significantly improve coding efficiency. From Copilot Chat's natural language capabilities to CLI automation, advanced agent functionality, and hidden productivity settings, we'll uncover the tools that experienced developers use to maximize their output. Whether you're using the free version or GitHub Copilot Pro, these techniques will help you leverage Copilot's full potential beyond standard code completion.
 
 ## Copilot Chat: More Than Just Code Suggestions
@@ -49,7 +51,7 @@ Additionally, you can use slash commands like "`/explain`" to quickly access com
 
 ### Multi-language Support in Copilot Chat
 
-Copilot Chat excels at working with multiple programming languages. While it works especially well with Python, JavaScript, TypeScript, Ruby, Go, C#, and C++, it actually supports over 30 programming languages including Rust, Swift, and Kotlin [4].
+Copilot Chat excels at working with multiple programming languages. While it works **especially well with Python, JavaScript, TypeScript, Ruby, Go, C#, and C++**, it actually supports over 30 programming languages including Rust, Swift, and Kotlin [4].
 
 Beyond programming languages, Copilot Chat can operate in numerous natural languages as well. The system supports over 30 different languages including English, Spanish, French, German, Japanese, Chinese, Arabic, and many others [5]. This multilingual capability means developers worldwide can interact with Copilot in their preferred language.
 
@@ -182,7 +184,7 @@ The next time you open your development environment, consider exploring these hi
     To maximize productivity, developers can utilize features like Copilot Chat for inline explanations and refactoring, leverage the CLI for terminal workflows, use the Agent for automating repetitive tasks, and customize Copilot settings. Additionally, exploring integrations with VS Code extensions and staying updated with new features can further enhance efficiency.
 
 
-*All this information is Open-Source and also avaliable at [Github's Copilot](){:target="_blank"}'s official site, you can also get more deeper information from here.*
+*All this information is Open-Source and also avaliable at [Github's Copilot](https://docs.github.com/en/copilot){:target="_blank"}'s official site, you can also get more deeper information from here.*
 
 
 <div style="text-align: center;">
