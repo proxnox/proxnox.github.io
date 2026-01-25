@@ -16,7 +16,7 @@ faq:
   - question: "How does Comet support journalism and content creators?"
     answer: "Comet Plus includes a $42.50 million fund for participating publishers, with 80% of subscription revenue going to content creators. This model supports quality journalism by allocating revenue based on direct visits, citations in AI answers, and usage within AI-driven tasks."
   - question: "Can Comet be used on mobile devices?"
-    answer: "Yes, Comet has been designed with a mobile-first approach. It features voice integration for hands-free operation, allowing users to ask questions or request summaries without leaving their current webpage, making it ideal
+    answer: "Yes, Comet has been designed with a mobile-first approach. It features voice integration for hands-free operation, allowing users to ask questions or request summaries without leaving their current webpage, making it ideal for research on the go."
 show_tags: false
 
 ---
