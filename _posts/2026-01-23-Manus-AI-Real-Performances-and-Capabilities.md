@@ -1,6 +1,6 @@
 ---
 layout: article
-title: What is Manus AI - Real Performkance and Features
+title: Hands on Manus AI - Real Benchmarks and Performances
 description: Discover how Manus AI transforms AI agents from simple responders to autonomous task executors, outperforming top models and enhanced productivity, features and capabilities across various industries.**
 tags: AI ChatGPT Gemini Claude
 permalink: manus-ai-max-real-capabilities-and-performnace
