@@ -3,6 +3,17 @@ layout: article
 title: ChatGPT 5.2 - Take a Look at The New GPT Features
 tags: AI GPT ChatGPT 
 permalink: new-chat-gpt-features-and-updates
+faq:
+  - question: "What are the key improvements in GPT-5.2?"
+    answer: "GPT-5.2 features enhanced reasoning capabilities, improved multimodal abilities including better image analysis, more sophisticated tool use, and a larger context window of 256,000 tokens. It also demonstrates reduced hallucinations and improved accuracy across various tasks."
+  - question: "How does GPT-5.2 compare to its competitors?"
+    answer: "According to benchmarks, GPT-5.2 outperforms other models like Gemini 3 Pro and Claude Opus 4.5 on several metrics. However, the actual user experience may vary depending on specific use cases and tasks."
+  - question: "What are the different variants of GPT-5.2 and how do they differ?"
+    answer: "GPT-5.2 comes in three variants: Instant (for quick, everyday tasks), Thinking (for complex work requiring deeper analysis), and Pro (for mission-critical tasks demanding the highest accuracy). Each variant offers different levels of performance and is suited for specific use cases."
+  - question: "How can users access GPT-5.2"
+    answer: "GPT-5.2 is available to all paid ChatGPT plans (Plus, Pro, Business, Enterprise). Developers can access it via API calls. The rollout may be gradual, so not all users might have immediate access."
+  - question: "What are the pricing changes for GPT-5.2?"
+    answer: "The new model comes with a price increase, with standard pricing at $1.75 per million input tokens and $14.00 per million output tokens. However, there's a 90% discount on cached inputs, potentially resulting in lower overall costs for completing tasks due to improved token efficiency."
 show_tags: false
 ---
 

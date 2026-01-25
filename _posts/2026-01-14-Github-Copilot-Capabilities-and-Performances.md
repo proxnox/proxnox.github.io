@@ -6,6 +6,17 @@ tags: AI Github Coding Software
 permalink: github-copilot-ide-code-editor-capabilities-and-features
 aside:
   toc: true
+faq:
+  - question: "How does GitHub Copilot Chat differ from standard code suggestions?"
+    answer: "GitHub Copilot Chat offers an interactive AI assistant within your development environment. It provides contextual explanations, natural language refactoring, and supports multiple programming and natural languages, making it a more versatile tool for complex coding tasks."
+  - question: "What are some hidden productivity features in GitHub Copilot's settings?"
+    answer: "Some hidden productivity features include enabling code explanation in the context menu, customizing prompt behavior for faster output, and integrating Copilot with VS Code extensions. These settings can significantly enhance coding efficiency beyond the default experience."
+  - question: "How can GitHub Copilot CLI improve terminal workflows?"
+    answer: "GitHub Copilot CLI brings AI assistance to the command line, offering context-aware command autocompletion, shell script generation from natural language prompts, and seamless integration with GitHub Copilot Pro. This tool helps developers stay focused on their tasks without switching between editor and terminal."
+  - question: "What is the Copilot Agent and how does it automate development tasks?"
+    answer: "The Copilot Agent is an autonomous coding assistant that handles repetitive tasks. It can perform UI cleanup and refactoring, execute multi-file edits with a single prompt, and in Visual Studio 2026, it includes a Profiler Agent for performance optimization. These features allow developers to focus on more complex problems."
+  - question: "How can developers maximize their productivity with GitHub Copilot?"
+    answer: "To maximize productivity, developers can utilize features like Copilot Chat for inline explanations and refactoring, leverage the CLI for terminal workflows, use the Agent for automating repetitive tasks, and customize Copilot settings. Additionally, exploring integrations with VS Code extensions and staying updated with new features can further enhance efficiency."
 show_tags: false
 
 ---

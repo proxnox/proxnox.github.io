@@ -174,7 +174,7 @@ The majority of lawyers are quick to liken these tools to hiring a “junior ass
 
 Solo practitioners have pointed out that sometimes use of "generic" AI models (like ChatGPT) or not-so-well-grounded legal tools can lead to "hallucination" of legalese that sounds authoritative but is in fact or legally incorrect. This has made the preference for Gavel Exec and LegalOn stronger, as they are "grounded" in real transactional precedents rather than internet data.
 
-### The Paralegal Evolution
+### The Para-legal Evolution
 
 There’s a lot of noise about AI "replacing" paralegals, but in practice, we’re seeing the exact opposite. AI isn't taking the job; it’s changing the job description. In 2025, the role is shifting from manual data entry to a high-stakes "Verification Manager" role.
 

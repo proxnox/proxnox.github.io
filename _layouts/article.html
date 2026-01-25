@@ -19,6 +19,8 @@ type: article
       </p>
     {% endif %}
     {{ content }}
+    
+    {% include faq-logic.html %}
   </div>
 
   {%- if _sharing -%}

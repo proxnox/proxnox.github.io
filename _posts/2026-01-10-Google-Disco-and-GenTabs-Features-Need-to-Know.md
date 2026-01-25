@@ -6,6 +6,17 @@ tags: AI Google Webapp Gentab
 permalink: google-disco-and-gentabs-things-to-know
 aside:
   toc: true
+faq:
+  - question: "What is Google Disco and how does it differ from traditional web browsing?"
+    answer: "Google Disco is an experimental AI-powered browser that transforms passive web browsing into active creation. Unlike traditional browsers, Disco uses AI to analyze your open tabs and generate custom, interactive web applications called GenTabs to help you complete complex online tasks more efficiently."
+  - question: "How do GenTabs work in Google Disco?"
+    answer: "GenTabs are AI-generated, temporary web applications created based on your open tabs and chat history. You can describe the tool you need in natural language, and Disco's AI will create a custom application to help you complete your task, all without requiring any coding knowledge."
+  - question: "What are some practical applications of Google Disco?"
+    answer: "Google Disco can be used for various tasks such as creating interactive travel planners, weekly meal schedules with nutrition information, study dashboards with visual aids, and business data tracking tools. It simplifies complex online activities by organizing information from multiple sources into a single, user-friendly interface."
+  - question: "Are there any privacy concerns with using Google Disco?"
+    answer: "Yes, there are privacy considerations. When using Disco, your activity, including AI chats and browsing history, is sent to and logged by Google. Your personal information may be stored in Canada and the United States, and some data might be retained even after account deletion for legal or security purposes."
+  - question: "How can I get access to Google Disco?"
+    answer: "To try Google Disco, you need to join the waitlist at labs.google/disco. The signup process involves answering questions about your previous AI tool usage. Currently, it's only available for macOS users and is in an experimental phase, so features and availability may change rapidly."
 show_tags: false
 
 ---

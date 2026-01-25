@@ -6,6 +6,17 @@ tags: AI Browser Perplexity Software
 permalink: perplexity-comet-ai-browser-specifications-performances-and-capabilities
 aside:
   toc: true
+faq:
+  - question: "What is the Comet AI browser and how does it differ from traditional browsers?"
+    answer: "The Comet AI browser is an AI-native browser that integrates artificial intelligence directly into the browsing experience. Unlike traditional browsers, Comet actively assists users in navigating information, encourages curiosity, and can perform tasks across websites autonomously."
+  - question: "How does the Comet Assistant work within the browser?"
+    answer: "The Comet Assistant is an AI agent that can interact with web content, tabs, email, and calendars. It can perform actions on behalf of users, navigate web pages autonomously, extract context from multiple tabs, and connect to services like Gmail and Google Calendar with read/write access."
+  - question: "What is the \"Background Assistants\" feature in Comet?"
+    answer: "Background Assistants in Comet are AI agents that can perform multiple tasks asynchronously while users focus on other activities. Users can track their progress via a dashboard and intervene only when necessary, similar to managing a team of skilled assistants."
+  - question: "How does Comet support journalism and content creators?"
+    answer: "Comet Plus includes a $42.50 million fund for participating publishers, with 80% of subscription revenue going to content creators. This model supports quality journalism by allocating revenue based on direct visits, citations in AI answers, and usage within AI-driven tasks."
+  - question: "Can Comet be used on mobile devices?"
+    answer: "Yes, Comet has been designed with a mobile-first approach. It features voice integration for hands-free operation, allowing users to ask questions or request summaries without leaving their current webpage, making it ideal
 show_tags: false
 
 ---

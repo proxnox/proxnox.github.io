@@ -6,6 +6,17 @@ tags: AI ChatGPT Gemini Claude
 permalink: manus-ai-max-real-capabilities-and-performnace
 aside:
   toc: true
+faq:
+  - question: "What sets Manus AI apart from traditional AI assistants?"
+    answer: "Manus AI functions as an autonomous agent capable of planning, executing, and verifying complex tasks independently. Unlike traditional AI that simply responds to queries, Manus can understand user intent, break down tasks, and complete multi-step workflows without constant human intervention."
+  - question: "How does Manus AI perform compared to other leading AI models?"
+    answer: "Manus AI has consistently outperformed other leading models on the GAIA benchmark, particularly in complex Level 3 tasks. It achieved an 86.5% success rate on basic tasks, 70.1% on intermediate tasks, and 57.7% on complex workflows, surpassing competitors like OpenAI's Deep Research and Microsoft's o1."
+  - question: "What industries can benefit from using Manus AI?"
+    answer: "Manus AI has demonstrated value across various sectors, including academic research, web and mobile app development, financial analysis, marketing automation, and personal productivity. It can streamline literature reviews, build complete applications through conversation, generate financial insights, automate personalized outreach, and assist with complex planning scenarios."
+  - question: "How does Manus AI's pricing structure work?"
+    answer: "Manus AI uses a credit-based system with multiple subscription tiers. Options range from a Free plan to paid plans starting at $19/month for 4,000 credits, up to $200/month for 40,000 credits. All plans include 300 daily refresh credits, and unused monthly credits don't roll over to the next billing cycle."
+  - question: "What security measures does Manus AI implement?"
+    answer: "Manus AI employs a Zero Trust architecture with isolated sandboxes for each user session. This approach contains potentially destructive actions within the sandbox without affecting user accounts or other sessions. Additionally, connectors to external services automatically disable when collaboration begins to prevent unauthorized access."
 show_tags: false
 
 ---

@@ -72,3 +72,42 @@
 
     "custom"
 ;
+
+/* FAQ Styling for ProxNox */
+.faq-section {
+    margin: 3rem 0;
+    border-top: 2px solid #f0f0f0;
+  }
+  .faq-title {
+    margin-top: 1.5rem;
+    font-size: 1.6rem;
+  }
+  .faq-item {
+    border-bottom: 1px solid #eee;
+    padding: 0.5rem 0;
+  }
+  .faq-item[open] {
+    background-color: #f9f9f9;
+  }
+  .faq-question {
+    padding: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .faq-question::-webkit-details-marker { display: none; }
+  .faq-icon::before { 
+    content: '▼'; 
+    font-size: 0.8rem; 
+    color: #007bff; 
+    transition: 0.3s;
+  }
+  .faq-item[open] .faq-icon::before { transform: rotate(180deg); }
+  .faq-answer {
+    padding: 0 1rem 1rem 1rem;
+    color: #444;
+    line-height: 1.6;
+  }
