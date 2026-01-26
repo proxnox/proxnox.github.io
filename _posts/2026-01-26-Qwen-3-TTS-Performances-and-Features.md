@@ -44,7 +44,6 @@ show_tags: false
     </div>
     <audio controls style="width: 100%; height: 40px;">
       <source src="assets\audio\qwen3_im.wav" type="audio/wav">
-      Your browser does not support the audio element.
     </audio>
   </div>
 
@@ -54,7 +53,6 @@ show_tags: false
     </div>
     <audio controls style="width: 100%; height: 40px;">
       <source src="assets\audio\qwen3_mu.wav" type="audio/wav">
-      Your browser does not support the audio element.
     </audio>
   </div>
 
