@@ -1,7 +1,7 @@
 ---
 layout: article
-title: Qwen 3 Text-to-Speech Model - Try it Right Now!
-description: Discover Qwen3-TTS, open-source TTS models by Alibaba Cloud. Experience stable, expressive, amazing benchmarks and streaming speech generation with vivid voice cloning and free-form voice design demo on github and huggingface.
+title: Qwen 3 TTS Model - Try it Right Now!
+description: Discover Qwen3-TTS(Text-to-Speech), open-source TTS models by Alibaba Cloud. Experience stable, expressive, amazing benchmarks and streaming speech generation with vivid voice cloning and free-form voice design demo on github and huggingface.
 tags: AI TTS Qwen3 Flash
 permalink: qwen3-tts-voice-ai-benchmarks-features-capabilties
 aside:
