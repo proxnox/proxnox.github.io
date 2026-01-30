@@ -35,7 +35,7 @@ What makes DeepSeek OCR 2 stand out from previous text extraction models? First,
 
 In this article, we'll explore how DeepSeek OCR 2 achieves these remarkable results through its innovative architecture, training methodology, and practical applications. Whether you're looking to improve your document digitization workflow or simply curious about the latest advances in optical character recognition technology, this comprehensive breakdown will provide valuable insights into this groundbreaking system.
 
-<div>{%- include extensions/youtube.html id='v=ZDntsimpS3g' -%}</div>
+<div>{%- include extensions/youtube.html id='ZDntsimpS3g' -%}</div>
 
 ## Benchmark Results and Real-World Capabilities
 
