@@ -117,6 +117,19 @@ Despite the surge in Mac Mini purchases for running Moltbot, you don't necessari
 
 ---
 
+<div style="text-align: center;">
+  <script>
+    atOptions = {
+      'key' : '26eb480a441c47dce2ebdd9e019b8e52',
+      'format' : 'iframe',
+      'height' : 90,
+      'width' : 728,
+      'params' : {}
+    };
+  </script>
+  <script src="https://www.highperformanceformat.com/26eb480a441c47dce2ebdd9e019b8e52/invoke.js"></script>
+</div>
+
 ### Using Cloudflare Workers with Moltworker
 
 For those preferring cloud deployment, Cloudflare offers Moltworker—a specially adapted version running on their infrastructure. This option requires a** Workers paid plan (USD 5.00/month) plus an Anthropic or OpenAI API key**. Accordingly, you gain always-on availability without dedicated hardware, plus enhanced security through Cloudflare's sandbox isolation.
