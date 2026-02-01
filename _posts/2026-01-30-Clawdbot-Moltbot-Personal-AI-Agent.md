@@ -30,7 +30,6 @@ Furthermore, Moltbot runs in the background on your own hardware, giving you som
 
 In this article, we'll explore everything you need to know about this groundbreaking AI assistant – from its origins as Clawdbot to its current incarnation as Moltbot, how to set it up, and whether it deserves a place in your productivity toolkit.
 
----
 
 ## What Is Moltbot (Formerly Clawdbot) and How Does It Work?
 
@@ -40,7 +39,6 @@ Moltbot began its life as Clawdbot, a project that rocketed to viral status almo
 
 *Here are the tasks which Moltbot can perform and applications with it can integrate.*
 
----
 
 ### From Clawdbot to Moltbot
 
@@ -48,7 +46,6 @@ Peter Steinberger, an Austrian developer who previously sold his company PSPDFKi
 
 Nevertheless, the rapid rise came with complications. Anthropic, the company behind Claude AI, sent a "friendly" email regarding trademark concerns over the similarities between "Clawd" and "Claude". Consequently, the project underwent rebranding from Clawdbot to Moltbot. This name change cleverly references how lobsters molt to grow – shedding their old shell to emerge larger and stronger.
 
----
 
 ### Core Capabilities: Beyond Just Chat
 
@@ -56,7 +53,6 @@ You'll find Moltbot stands apart from standard AI assistants through three funda
 
 The system lives where you already communicate – WhatsApp, Telegram, Slack, Discord, and other messaging platforms. This approach transforms casual chat into a powerful command layer for automation.
 
----
 
 ### Offline and Self-Hosted by Design
 
@@ -64,7 +60,6 @@ The heart of Moltbot's architecture is a component called the Gateway – a Node
 
 Moreover, **Moltbot operates entirely on infrastructure you control rather than as a managed cloud service**. You can deploy it on your personal computer, a VPS, or dedicated hardware like a Raspberry Pi. This self-hosted nature delivers superior privacy, transparency, and control over your digital assistant's actions and data.
 
----
 
 ## Features and Real-World Uses of Moltbot AI
 
@@ -72,19 +67,16 @@ The real power of Moltbot reveals itself through its practical applications that
 
 <div>{%- include extensions/youtube.html id='U8kXfk8enrY' -%}</div>
 
----
 
 ### Inbox and Calendar Automation
 
 Moltbot excels at clearing your inbox by filtering spam, organizing messages into folders, and even drafting responses to common questions. **You can simply text "delete all promotional emails from last month" while commuting**, and it handles the rest. For calendar management, I've found it remarkably helpful—it adds events with appropriate travel buffer times and even sends meeting invites directly through its own calendar when privacy concerns arise.
 
----
 
 ### Daily Briefs and Task Execution
 
 One of the most valuable features is Moltbot's ability to generate personalized morning briefings. These comprehensive reports combine weather updates, pending tasks, priorities, and relevant information from your connected accounts. Through persistent memory, **your AI assistant remembers your preferences and adapts these briefs over time**. You'll receive scheduled notifications based on your calendar and custom "heartbeats" that check if you need assistance throughout the day.
 
----
 
 ### Multi-Tool Integration (Slack, Telegram, etc.)
 
@@ -97,49 +89,54 @@ Moltbot truly shines through its multi-channel capability, connecting simultaneo
 
 This isn't just about having multiple bots—it's one assistant with shared memory across platforms. You might start a conversation on WhatsApp and continue later on Telegram without losing context, since all interactions route through the central Gateway component.
 
----
 
 ### Agent Teams and Subtask Delegation
 
 Perhaps the most groundbreaking feature is Moltbot's sub-agent architecture. This system allows you to spawn independent worker sessions that handle tasks in parallel while your main conversation continues uninterrupted. Instead of sequentially researching five competitors, you can assign five sub-agents to work simultaneously. Each sub-agent maintains its own isolated context, executes independently, and reports back when complete—transforming how efficiently you can collaborate with AI.
 
----
 
 ## Setup and Deployment Options: Local vs Cloud
 
 Setting up your personal AI assistant offers multiple deployment paths depending on your needs and technical comfort. From local hardware to cloud solutions, you have several options for running this versatile tool.
 
----
 
 ### Running on Mac Mini or Studio (Clawbot Mini Mac)
 
 Despite the surge in Mac Mini purchases for running Moltbot, you don't necessarily need dedicated Apple hardware. However, the popularity makes sense—Mac Minis provide an all-in-one solution with their efficient M-series chips. The setup process takes just 5-30 minutes, requiring only basic terminal knowledge. I've found the installation remarkably straightforward—simply copy the one-liner `curl -fsSL https://clawd.bot/install.sh | bash` into your terminal, and follow the setup wizard.
 
----
+
+<div style="text-align: center;">
+  <script>
+    atOptions = {
+      'key' : '26eb480a441c47dce2ebdd9e019b8e52',
+      'format' : 'iframe',
+      'height' : 90,
+      'width' : 728,
+      'params' : {}
+    };
+  </script>
+  <script src="https://www.highperformanceformat.com/26eb480a441c47dce2ebdd9e019b8e52/invoke.js"></script>
+</div>
 
 ### Using Cloudflare Workers with Moltworker
 
 For those preferring cloud deployment, Cloudflare offers Moltworker—a specially adapted version running on their infrastructure. This option requires a** Workers paid plan (USD 5.00/month) plus an Anthropic or OpenAI API key**. Accordingly, you gain always-on availability without dedicated hardware, plus enhanced security through Cloudflare's sandbox isolation.
 
----
 
 ### GitHub Moltbot Setup and Configuration
 
 The GitHub approach provides maximum flexibility. You can deploy Moltbot on **virtually any platform—from USD 3.50/month VPS services** to repurposed old computers. Even a Raspberry Pi works for lightweight usage. Additionally, Docker containers offer another deployment method for those with existing server setups.
 
----
 
 ### Model Strategy: Opus as Brain, Codex as Muscle
 
 Many experienced users employ a dual-model strategy—using Anthropic's Claude Opus as the "brain" for reasoning and OpenAI's Codex as the "muscle" for coding tasks. This approach optimizes performance by leveraging each model's strengths. Furthermore, OpenAI models prove especially reliable for programming-heavy workflows, while Claude excels at nuanced reasoning.
 
----
 
 ## Security, Privacy, and Control Considerations
 
 The power of running an AI agent with system access comes with significant security implications. Moltbot's ability to execute commands, access files, and interact with your services creates a complex security landscape that requires careful consideration.
 
----
 
 ### Prompt Injection and Secrets Management
 
@@ -147,19 +144,16 @@ Prompt injection remains a major vulnerability for AI agents like Moltbot. Attac
 
 Secrets management presents another critical challenge. Your Moltbot workspace typically stores API keys, OAuth tokens, and credentials that could be exposed. Indeed, **GitGuardian detected 181 unique secrets leaked from repositories containing clawdbot or moltbot keywords**. Generally, following the principle of storing secrets securely and rotating them regularly helps minimize risks.
 
----
 
 ### Audit Trails and Least Privilege Access
 
 Implementing comprehensive logging for every action your AI assistant attempts creates accountability. Obviously, this provides visibility into exactly what commands were executed and what files were accessed. For better security, configure Moltbot to run with the minimum permissions necessary rather than administrator access.
 
----
 
 ### Why Enterprises Should Start with Pilots
 
 Enterprises should begin with controlled pilots in specific departments before wider deployment. Start with read-only permissions and expand slowly once security practices mature. Executive operations, sales support, and internal knowledge retrieval represent ideal first use cases with appropriate guardrails.
 
----
 
 ## Conclusion
 
