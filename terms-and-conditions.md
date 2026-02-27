@@ -2,6 +2,7 @@
 layout: article
 titles: Terms and Conditions
 key: page-terms-and-conditions
+permalink: terms-and-conditions
 ---
 
 ## Terms and Conditions
