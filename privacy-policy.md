@@ -2,7 +2,6 @@
 layout: article
 titles: Privacy Policy
 key: page-privacy-policy
-permalink: privacy-policy
 ---
 
 ## Privacy Policy for Proxnox

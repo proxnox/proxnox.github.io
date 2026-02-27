@@ -2,7 +2,6 @@
 layout: article
 titles: Contact Us
 key: page-contact
-permalink: contact
 ---
 
 ## Contact Us
