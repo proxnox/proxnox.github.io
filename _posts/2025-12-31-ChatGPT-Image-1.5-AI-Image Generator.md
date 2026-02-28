@@ -22,7 +22,7 @@ show_tags: false
 
 ChatGPT's new image generator has officially arrived with significant improvements that transform how users create and edit visual content. The new Images model, known as **GPT Image 1.5**, is rolling out today in ChatGPT for all users and is available in the API as well. This latest iteration represents OpenAI's third new model in about a month and brings substantial enhancements to image generation capabilities.
 
-Access ChatGPT Image 1.5 AI Image Generator [here](http://127.0.0.1:4000/chatgpt-image-1.5-ai-image-generator/).
+Access ChatGPT Image 1.5 AI Image Generator [here](https://chatgpt.com/images).
 
 <div style="text-align:center">
     <img alt="New GPT Image 1.5 styles" src="/assets/images/chatgpt.com_images_.png"/>
