@@ -1,9 +1,5 @@
 User-agent: *
-Allow: /
-Disallow: /assets/js/
-Disallow: /assets/css/main.css
 Disallow: /search.html
 Disallow: /404.html
 
-# Point to Sitemap
 Sitemap: https://proxnox.github.io/sitemap.xml
